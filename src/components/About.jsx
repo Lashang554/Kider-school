@@ -18,13 +18,13 @@ const AboutSection = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <Link
                 to="/about"
-                className="btn-primary rounded-full px-8 py-3"
+                className="bg-orange-500 hover:bg-orange-600 transition  btn-primary rounded-full px-8 py-3"
               >
                 Read More
               </Link>
               <div className="flex items-center">
                 <img
-                  src="/img/user.jpg"
+                  src="/image/user.jpg"
                   alt="CEO"
                   className="w-12 h-12 rounded-full mr-3"
                 />
@@ -38,7 +38,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="text-center">
               <img
-                src="/img/about-1.jpg"
+                src="/image/about-1.jpg"
                 alt="About"
                 className="w-3/4 mx-auto rounded-full bg-gray-100 p-3"
               />
@@ -46,14 +46,14 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-4 -mt-32">
               <div>
                 <img
-                  src="/img/about-2.jpg"
+                  src="/image/about-2.jpg"
                   alt="About"
                   className="w-full rounded-full bg-gray-100 p-3"
                 />
               </div>
               <div>
                 <img
-                  src="/img/about-3.jpg"
+                  src="/image/about-3.jpg"
                   alt="About"
                   className="w-full rounded-full bg-gray-100 p-3"
                 />

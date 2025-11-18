@@ -53,7 +53,7 @@ const Footer = () => {
               {[1, 2, 3, 4, 5, 6].map((num) => (
                 <img
                   key={num}
-                  src={`/img/classes-${num}.jpg`}
+                  src={`/image/classes-${num}.jpg`}
                   alt={`Gallery ${num}`}
                   className="w-full h-20 object-cover rounded bg-gray-700 p-1"
                 />
@@ -70,7 +70,7 @@ const Footer = () => {
                 placeholder="Your email"
                 className="w-full bg-transparent border border-gray-600 rounded px-4 py-3 pr-24 text-white placeholder-gray-400 focus:outline-none focus:border-primary"
               />
-              <button className="btn-primary absolute right-2 top-2 px-4 py-1.5 rounded text-sm">
+              <button className="bg-orange-500 btn-primary absolute right-2 top-2 px-4 py-1.5 rounded text-white hover:bg-orange-600 transition ">
                 SignUp
               </button>
             </div>
