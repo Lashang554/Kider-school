@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 const Carousel = () => {
   const slides = [
     {
-      image: 'https://themewagon.github.io/kider/img/carousel-1.jpg',
+      image: 'https://themewagon.github.io/kider/img/carousel-1.jpg ',
       heading: 'The Best Kindergarten School For Your Child',
       description:
         'Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.'
