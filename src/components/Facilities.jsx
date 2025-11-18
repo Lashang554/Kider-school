@@ -2,8 +2,20 @@ import { FaBus } from "react-icons/fa";
 import { FaFutbol } from "react-icons/fa";
 import { FaHouseUser } from "react-icons/fa";
 import { FaChalkboardTeacher } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Facilities = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // animation speed
+      once: true,     // only on first scroll
+      easing: "ease-out"
+    });
+  }, []);
+
   const data = [
     {
       icon: <FaBus className="text-5xl text-orange-500" />,
@@ -34,8 +46,10 @@ const Facilities = () => {
   return (
     <section className="py-20">
       {/* Title */}
-      <div className="text-center mb-12">
-        <h1 className="text-5xl font-extrabold text-gray-800 mb-4">School Facilities</h1>
+      <div className="text-center mb-12" data-aos="fade-up">
+        <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
+          School Facilities
+        </h1>
         <p className="text-gray-500 max-w-2xl mx-auto">
           Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit.
           Ipsum diam justo sed rebum vero dolor duo.
@@ -48,26 +62,27 @@ const Facilities = () => {
           <div
             key={index}
             className="flex flex-col items-center text-center group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay={index * 200} // animate one by one
           >
-            {/* Top Small Circle with Hover */}
+            {/* Top Circle */}
             <div
               className={`w-32 h-32 rounded-full flex items-center justify-center ${item.bg} mb-[-60px] z-10 
-          transition-all duration-300 group-hover:scale-110 group-hover:brightness-110`}
+                transition-all duration-300 group-hover:scale-110 group-hover:brightness-110`}
             >
               <div className="transition-all duration-300 group-hover:scale-125">
                 {item.icon}
               </div>
             </div>
 
-            {/* Large Bottom Circle with Hover */}
+            {/* Bottom Circle */}
             <div
               className={`w-72 h-72 rounded-full flex flex-col justify-center px-6 ${item.bg}
-          transition-all duration-300 group-hover:brightness-110 group-hover:shadow-2xl`}
+                transition-all duration-300 group-hover:brightness-110 group-hover:shadow-2xl`}
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-3">{item.title}</h2>
               <p className="text-gray-600">{item.desc}</p>
             </div>
-
           </div>
         ))}
       </div>

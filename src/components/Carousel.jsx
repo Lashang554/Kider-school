@@ -17,12 +17,19 @@ const Carousel = () => {
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [animateOnce, setAnimateOnce] = useState(true)
 
-  // auto-play (reset timer after each slide change so manual navigation works too)
+  // Run animation once on page load
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimateOnce(false), 1200)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Auto Slide
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length)
-    }, 8000) // 8s between slides
+    }, 8000)
 
     return () => clearTimeout(timer)
   }, [currentIndex, slides.length])
@@ -35,8 +42,6 @@ const Carousel = () => {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
   }
 
-  const goToSlide = (index) => setCurrentIndex(index)
-
   return (
     <div className="relative w-full h-screen overflow-hidden bg-slate-900">
       <div
@@ -44,27 +49,43 @@ const Carousel = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={slide.heading} className="min-w-full h-full relative">
+          <div key={index} className="min-w-full h-full relative">
             <img
               src={slide.image}
               alt={`Carousel ${index + 1}`}
               className="w-full h-full object-cover"
             />
 
+            {/* Content */}
             <div className="absolute inset-0 flex items-center">
               <div className="container mx-auto px-4 md:px-10 lg:px-16">
-                <div className="max-w-2xl  p-4 md:p-10 rounded-2xl ">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-['Playfair Display',serif] italic">
+                <div className="max-w-2xl p-4 md:p-10 rounded-2xl">
+                  <h1
+                    className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-['Playfair Display',serif] italic 
+                    ${animateOnce ? 'animate-slideDown' : ''}`}
+                  >
                     {slide.heading}
                   </h1>
-                  <p className="text-white/90 text-lg md:text-xl mb-8 leading-relaxed">
+
+                  <p
+                    className={`text-white/90 text-lg md:text-xl mb-8 leading-relaxed 
+                    ${animateOnce ? 'animate-fadeIn' : ''}`}
+                  >
                     {slide.description}
                   </p>
+
                   <div className="flex flex-wrap gap-4">
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all">
+                    <button
+                      className={`bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all 
+                      ${animateOnce ? 'animate-slideLeft' : ''}`}
+                    >
                       Learn More
                     </button>
-                    <button className="bg-teal-700 hover:bg-teal-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all">
+
+                    <button
+                      className={`bg-teal-700 hover:bg-teal-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all 
+                      ${animateOnce ? 'animate-slideRight' : ''}`}
+                    >
                       Our Classes
                     </button>
                   </div>
@@ -75,36 +96,20 @@ const Carousel = () => {
         ))}
       </div>
 
-      {/* stacked arrows on the right */}
+      {/* Arrows */}
       <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-30">
         <button
           onClick={goToPrevious}
           className="w-12 h-12 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 transition"
-          aria-label="Previous slide"
         >
           <i className="fas fa-chevron-left" />
         </button>
         <button
           onClick={goToNext}
           className="w-12 h-12 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 transition"
-          aria-label="Next slide"
         >
           <i className="fas fa-chevron-right" />
         </button>
-      </div>
-
-      {/* dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`h-3 rounded-full transition-all ${
-              index === currentIndex ? 'bg-white w-8' : 'bg-white/50 w-3'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
       </div>
     </div>
   )
