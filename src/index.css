@@ -22,7 +22,7 @@
   100% { opacity: 1; }
 }
 
-.animate-slideDown { animation: slideDown 2s ease forwards; }
-.animate-slideLeft { animation: slideLeft 2s ease forwards; }
-.animate-slideRight { animation: slideRight 2s ease forwards; }
+.animate-slideDown { animation: slideDown 1s ease forwards; }
+.animate-slideLeft { animation: slideLeft 1s ease forwards; }
+.animate-slideRight { animation: slideRight 1s ease forwards; }
 .animate-fadeIn { animation: fadeIn 1.3s ease forwards; }
