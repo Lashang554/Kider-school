@@ -10,7 +10,7 @@ const Facilities = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1200, // animation speed
+      duration: 400, // animation speed
       once: true,     // only on first scroll
       easing: "ease-out"
     });

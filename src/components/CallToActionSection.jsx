@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa'
 
 const CallToActionSection = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 m-12" >
       <div className="container mx-auto px-4">
         <div className="bg-gray-100 rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -14,7 +14,7 @@ const CallToActionSection = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex flex-col justify-center p-8 lg:p-12">
+            <div className="flex flex-col justify-center p-8 lg:p-12 bg-orange-50">
               <h1 className="text-4xl font-lobster mb-4">Become A Teacher</h1>
               <p className="text-gray-600 mb-6">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.

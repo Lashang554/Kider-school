@@ -1,11 +1,21 @@
 import { Link } from 'react-router'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const AboutSection = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out',
+    })
+  })
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div data-aos="fade-up">
             <h1 className="text-4xl font-lobster mb-6">
               Learn More About Our Work And Our Cultural Activities
             </h1>
@@ -35,27 +45,31 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="text-center">
-              <img
-                src="/image/about-1.jpg"
-                alt="About"
-                className="w-3/4 mx-auto rounded-full bg-gray-100 p-3"
-              />
+          <div className="relative" data-aos="fade-up">
+            <div className="w-full flex justify-center">
+              <div className="rounded-full border-[14px] border-orange-100 hover:border-orange-500 transition-all duration-300">
+                <img
+                  src="/image/about-1.jpg"
+                  alt="About"
+                  className="rounded-full w-72 h-72 object-cover"
+                />
+              </div>
             </div>
+
             <div className="grid grid-cols-2 gap-4 -mt-32">
-              <div>
+              <div className='rounded-full border-[14px] border-orange-100 hover:border-orange-500 transition-all duration-300'>
                 <img
                   src="/image/about-2.jpg"
                   alt="About"
-                  className="w-full rounded-full bg-gray-100 p-3"
+                  className="w-full rounded-full bg-gray-100 "
+
                 />
               </div>
-              <div>
+              <div className='rounded-full border-[14px] border-orange-100 hover:border-orange-500 transition-all duration-300'>
                 <img
                   src="/image/about-3.jpg"
                   alt="About"
-                  className="w-full rounded-full bg-gray-100 p-3"
+                  className="w-full rounded-full bg-gray-100 "
                 />
               </div>
             </div>
