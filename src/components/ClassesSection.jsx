@@ -54,8 +54,8 @@ const ClassesSection = () => {
     ];
 
     return (
-        <section className="py-10 bg-gray-50">
-            
+        <section className="py-10 ">
+
             {/* Added responsive horizontal padding here */}
             <div className="container mx-auto  px-10 sm:px-6 lg:px-8">
                 {/* Title Section */}
@@ -67,17 +67,17 @@ const ClassesSection = () => {
                 </div>
 
                 {/* Classes Grid (with previous fix) */}
-                <div className="pt-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-40">
+                <div className="pt-40 mx-auto px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-40 justify-items-center">
                     {classes.map((classItem, index) => (
                         <div
                             key={index}
-                            className="bg-[#FFF5F5] rounded-2xl shadow-lg hover:shadow-xl transition-all pt-32 pb-10 relative"
+                            className="bg-[#FFF5F5] w-85 rounded-2xl shadow-lg hover:shadow-xl transition-all pt-20 pb-6 relative"
                             data-aos="fade-up"
                             data-aos-delay={index * 100}
                         >
                             {/* Rounded Image */}
                             <div className="absolute -top-32 left-1/2 -translate-x-1/2">
-                                <div className="w-56 h-56 rounded-full bg-white p-4 shadow-xl">
+                                <div className="w-60 h-60 rounded-full bg-[#FFF5F5] p-4 shadow-xl">
                                     <img
                                         src={`/image/${classItem.image}`}
                                         alt={classItem.title}
