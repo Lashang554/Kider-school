@@ -44,7 +44,7 @@ const Facilities = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 m-15">
       {/* Title */}
       <div className="text-center mb-12" data-aos="fade-up">
         <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
@@ -57,7 +57,7 @@ const Facilities = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto m-15">
         {data.map((item, index) => (
           <div
             key={index}

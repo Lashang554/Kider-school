@@ -45,13 +45,18 @@ const Teachers = () => {
             </div>
 
             {/* CIRCLE CARD – shifted to right */}
-            <div className="
-              absolute bottom-[-60px]
-              w-[230px] h-[230px]
-              bg-white rounded-full shadow-xl border-8 border-pink-100
-              flex flex-col items-center justify-center
-              left-1/2 translate-x-[5%]
-            ">
+           <div
+                className="
+                absolute bottom-[-60px]
+                w-[230px] h-[230px]
+                bg-white
+                rounded-full shadow-xl border-8 border-pink-100
+                flex flex-col items-center justify-center
+                left-1/2 translate-x-[5%]
+                transition-all duration-300
+                hover:border-pink-400
+              "
+            >
               <h3 className="font-bold text-xl">{t.name}</h3>
               <p className="text-gray-500 text-sm">{t.desig}</p>
 

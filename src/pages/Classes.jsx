@@ -2,8 +2,7 @@ import React from 'react'
 
 const Classes = () => {
   return (
-    <div>
-      classes
+    <div className="pt-20 px-4">      classes
     </div>
   )
 }

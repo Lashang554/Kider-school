@@ -67,7 +67,7 @@ const ClassesSection = () => {
                 </div>
 
                 {/* Classes Grid (with previous fix) */}
-                <div className="pt-40 mx-auto px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-40 justify-items-center">
+                <div className="pt-45 mx-auto px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-40 justify-items-center">
                     {classes.map((classItem, index) => (
                         <div
                             key={index}
@@ -76,7 +76,7 @@ const ClassesSection = () => {
                             data-aos-delay={index * 100}
                         >
                             {/* Rounded Image */}
-                            <div className="absolute -top-32 left-1/2 -translate-x-1/2">
+                            <div className="absolute -top-38 left-1/2 -translate-x-1/2">
                                 <div className="w-60 h-60 rounded-full bg-[#FFF5F5] p-4 shadow-xl">
                                     <img
                                         src={`/image/${classItem.image}`}
