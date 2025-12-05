@@ -12,7 +12,7 @@ const AboutSection = () => {
     })
   })
   return (
-    <section className="py-16 bg-white m-15">
+    <section className="py-5 bg-white m-15">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-up">

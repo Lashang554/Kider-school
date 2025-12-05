@@ -1,4 +1,6 @@
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const teachers = [
   {
@@ -19,9 +21,14 @@ const teachers = [
 ];
 
 const Teachers = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 700, once: true });
+  }, []);
+
   return (
-    <section className="py-20">
-      <div className="text-center mb-10">
+    <section className="pb-20">
+      <div className="text-center mb-10" data-aos="fade-up">
         <h2 className="text-4xl font-bold font-serif text-gray-800">
           Popular Teachers
         </h2>
@@ -33,7 +40,7 @@ const Teachers = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {teachers.map((t, i) => (
-          <div key={i} className="relative flex flex-col items-center">
+          <div key={i} className="relative flex flex-col items-center" data-aos="fade-up">
 
             {/* OVAL IMAGE */}
             <div className="w-[260px] h-[400px] bg-pink-50 rounded-full overflow-hidden">
@@ -44,18 +51,14 @@ const Teachers = () => {
               />
             </div>
 
-            {/* CIRCLE CARD – shifted to right */}
-           <div
-                className="
-                absolute bottom-[-60px]
-                w-[230px] h-[230px]
-                bg-white
-                rounded-full shadow-xl border-8 border-pink-100
-                flex flex-col items-center justify-center
-                left-1/2 translate-x-[5%]
-                transition-all duration-300
-                hover:border-pink-400
-              "
+            {/* CIRCLE CARD */}
+            <div
+              
+              className="
+                absolute bottom-[-60px] w-[230px] h-[230px]
+                bg-white rounded-full shadow-xl border-12 border-orange-100
+                flex flex-col items-center justify-center left-1/2 translate-x-[5%]
+                transition-all duration-300 hover:border-orange-400"
             >
               <h3 className="font-bold text-xl">{t.name}</h3>
               <p className="text-gray-500 text-sm">{t.desig}</p>

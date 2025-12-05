@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa'
 
 const CallToActionSection = () => {
   return (
-    <section className="py-16 m-15" >
+    <section className=" m-15" >
       <div className="container mx-auto px-4">
         <div className="bg-gray-100 rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">

@@ -23,7 +23,7 @@ const AppointmentSection = () => {
     }
 
     return (
-        <section className=" m-20 py-10">
+        <section className=" m-20 py-5">
             <div className=" container mx-auto px-4">
                 <div className="bg-[#FFF5F5] rounded-lg overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2">

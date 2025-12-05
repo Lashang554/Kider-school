@@ -6,6 +6,7 @@ import CallToActionSection from '../components/CallToActionSection'
 import ClassesSection from '../components/ClassesSection'
 import Appointment from '../components/Appointment'
 import Teachers from '../components/Teacher'
+import Testimonials from '../components/Testimonials'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <ClassesSection/>
       <Appointment/>
       <Teachers/>
+      <Testimonials/>
     </div>
   )
 }

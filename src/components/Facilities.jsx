@@ -10,7 +10,7 @@ const Facilities = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 400, // animation speed
+      duration: 20, // animation speed
       once: true,     // only on first scroll
       easing: "ease-out"
     });
@@ -44,7 +44,7 @@ const Facilities = () => {
   ];
 
   return (
-    <section className="py-20 m-15">
+    <section className="py-10 m-15">
       {/* Title */}
       <div className="text-center mb-12" data-aos="fade-up">
         <h1 className="text-5xl font-extrabold text-gray-800 mb-4">

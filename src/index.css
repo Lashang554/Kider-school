@@ -1,9 +1,13 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
 /* === CAROUSEL TEXT ANIMATIONS === */
 @keyframes slideDown {
-  0% { opacity: 0; transform: translateY(-150px); }
+  0% { opacity: 0; transform: translateY(-250px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
