@@ -29,9 +29,7 @@ const Teachers = () => {
   return (
     <section className="pb-20">
       <div className="text-center mb-10" data-aos="fade-up">
-        <h2 className="text-4xl font-bold font-serif text-gray-800">
-          Popular Teachers
-        </h2>
+        <h1 className="text-4xl font-lobster mb-4">Popular Teachers</h1>
         <p className="max-w-2xl mx-auto mt-4 text-gray-500">
           Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore
           lorem kasd vero ipsum sit eirmod sit.
@@ -56,11 +54,11 @@ const Teachers = () => {
               
               className="
                 absolute bottom-[-60px] w-[230px] h-[230px]
-                bg-white rounded-full shadow-xl border-12 border-orange-100
+                bg-white rounded-full shadow-xl border-12 border-[#FFF5F5]
                 flex flex-col items-center justify-center left-1/2 translate-x-[5%]
-                transition-all duration-300 hover:border-orange-400"
+                transition-all duration-300 hover:border-orange-500"
             >
-              <h3 className="font-bold text-xl">{t.name}</h3>
+              <h3 className="font-inter font-bold text-xl">{t.name}</h3>
               <p className="text-gray-500 text-sm">{t.desig}</p>
 
               <div className="flex gap-4 mt-3 text-white">

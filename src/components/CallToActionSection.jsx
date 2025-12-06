@@ -14,7 +14,7 @@ const CallToActionSection = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex flex-col justify-center p-8 lg:p-12 bg-orange-50">
+            <div className="flex flex-col justify-center p-8 lg:p-12 bg-[#FFF5F5]">
               <h1 className="text-4xl font-lobster mb-4">Become A Teacher</h1>
               <p className="text-gray-600 mb-6">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.

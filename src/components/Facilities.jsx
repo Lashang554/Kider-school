@@ -47,7 +47,7 @@ const Facilities = () => {
     <section className="py-10 m-15">
       {/* Title */}
       <div className="text-center mb-12" data-aos="fade-up">
-        <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
+        <h1 className="text-5xl font-inter font-extrabold text-gray-800 mb-4">
           School Facilities
         </h1>
         <p className="text-gray-500 max-w-2xl mx-auto">
@@ -80,7 +80,7 @@ const Facilities = () => {
               className={`w-72 h-72 rounded-full flex flex-col justify-center px-6 ${item.bg}
                 transition-all duration-300 group-hover:brightness-110 group-hover:shadow-2xl`}
             >
-              <h2 className="text-3xl font-bold text-gray-800 mb-3">{item.title}</h2>
+              <h2 className="text-3xl font-inter font-bold text-gray-800 mb-3">{item.title}</h2>
               <p className="text-gray-600">{item.desc}</p>
             </div>
           </div>

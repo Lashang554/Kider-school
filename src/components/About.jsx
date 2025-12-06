@@ -47,7 +47,7 @@ const AboutSection = () => {
           </div>
           <div className="relative" data-aos="fade-up">
             <div className="w-full flex justify-center">
-              <div className="rounded-full border-[14px] border-orange-100 hover:border-orange-500 transition-all duration-300">
+              <div className="rounded-full border-[14px] border-[#FFEAEA] hover:border-orange-500 transition-all duration-300">
                 <img
                   src="/image/about-1.jpg"
                   alt="About"
@@ -57,7 +57,8 @@ const AboutSection = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 -mt-32">
-              <div className='rounded-full border-[14px] border-orange-100 hover:border-orange-500 transition-all duration-300'>
+              <div className="rounded-full border-[14px] border-[#FFEAEA] hover:border-orange-500 transition-all duration-300">
+
                 <img
                   src="/image/about-2.jpg"
                   alt="About"
@@ -65,7 +66,7 @@ const AboutSection = () => {
 
                 />
               </div>
-              <div className='rounded-full border-[14px] border-orange-100 hover:border-orange-500 transition-all duration-300'>
+              <div className="rounded-full border-[14px] border-[#FFEAEA] hover:border-orange-500 transition-all duration-300">
                 <img
                   src="/image/about-3.jpg"
                   alt="About"

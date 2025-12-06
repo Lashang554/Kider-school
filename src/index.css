@@ -1,8 +1,27 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Inter:wght@400;600;700&family=Lobster+Two:wght@400;700&display=swap');
 @import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "tailwindcss";
 
-@import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
+/* Global fonts */
+body {
+  font-family: 'Heebo', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.font-heebo {
+  font-family: 'Heebo', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-lobster {
+  font-family: 'Lobster Two', cursive;
+}
 
 
 /* === CAROUSEL TEXT ANIMATIONS === */
