@@ -3,9 +3,9 @@ import Carousel from '../components/Carousel'
 import Facilities from '../components/Facilities'
 import CallToActionSection from '../components/CallToActionSection'
 import ClassesSection from '../components/ClassesSection'
-import Appointment from '../components/Appointment'
+import AppointmentSection from '../components/AppointmentSection'
 import Teachers from '../components/Teacher'
-import Testimonials from '../components/Testimonials'
+import TestimonialSection from '../components/TestimonialSection'
 import AboutSection from '../components/AboutSection'
 
 const Home = () => {
@@ -16,9 +16,9 @@ const Home = () => {
       <AboutSection />
       <CallToActionSection/>
       <ClassesSection/>
-      <Appointment/>
+      <AppointmentSection/>
       <Teachers/>
-      <Testimonials/>
+      <TestimonialSection/>
     </div>
   )
 }

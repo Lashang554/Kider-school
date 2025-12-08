@@ -12,6 +12,10 @@ import Nabvar from './components/Nabvar.jsx'
 import Footer from './components/Footer.jsx'
 import Facility from './pages/Facility.jsx'
 import Team from './pages/Team.jsx'
+import CallToAction from './pages/CallToAction.jsx'
+import Appointment from './pages/Appointment.jsx'
+import Testimonial from './pages/Testmoinal.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -25,7 +29,10 @@ createRoot(document.getElementById('root')).render(
         <Route path="/contact" element={<Contact />} />
         <Route path="/facility" element={<Facility />} />
         <Route path="/team" element={<Team />} />
-
+        <Route path="/call-to-action" element={<CallToAction/>}/>
+        <Route path="/appointment" element={<Appointment/>}/>
+        <Route path="/testimonial" element={<Testimonial/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

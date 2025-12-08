@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import ClassesSection from '../components/ClassesSection'
-import Appointment from '../components/Appointment'
-import Testimonials from '../components/Testimonials'
+import Appointment from '../components/AppointmentSection'
+import Testimonials from '../components/TestimonialSection'
 const Classes = () => {
   return (
     <div>
