@@ -34,16 +34,16 @@ const Contact = () => {
       <div className="bg-primary py-20">
       <div className="absolute inset-0 bg-black/50 flex items-center">
           <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-lobster text-white mb-4">
-              About Us
+            <h1 className=" pl-20 text-8xl font-50 font-lobster text-white mb-4">
+              Contact
             </h1>
 
             {/* Breadcrumbs */}
-            <nav className="text-white">
+            <nav className=" pl-20 text-white">
               <ol className="flex space-x-2 text-lg font-medium">
                 <li>
                   <Link to="/" className="hover:text-orange-400">
-                    Home
+                    Home 
                   </Link>
                 </li>
                 <li>/</li>

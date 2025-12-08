@@ -16,6 +16,7 @@ import CallToAction from './pages/CallToAction.jsx'
 import Appointment from './pages/Appointment.jsx'
 import Testimonial from './pages/Testmoinal.jsx'
 import NotFound from './pages/NotFound.jsx'
+import BackToTop from './components/BackToTop.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -35,6 +36,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="*" element={<NotFound/>}/>
       </Routes>
       <Footer/>
+      <BackToTop />
     </BrowserRouter>
   </StrictMode>,
 )
