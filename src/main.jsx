@@ -10,6 +10,8 @@ import Pages from './pages/Pages.jsx'
 import Contact from './pages/Contact.jsx'
 import Nabvar from './components/Nabvar.jsx'
 import Footer from './components/Footer.jsx'
+import Facility from './pages/Facility.jsx'
+import Team from './pages/Team.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +23,9 @@ createRoot(document.getElementById('root')).render(
         <Route path="/classes" element={<Classes />} />
         <Route path="/pages" element={<Pages />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/facility" element={<Facility />} />
+        <Route path="/team" element={<Team />} />
+
       </Routes>
       <Footer/>
     </BrowserRouter>

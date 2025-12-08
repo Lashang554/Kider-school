@@ -1,10 +1,9 @@
 import { Link } from 'react-router'
-import CallToActionSection from '../components/CallToActionSection'
-import Teacher from '../components/Teacher'
-import AboutSection from '../components/AboutSection'
+import Facilities from '../components/Facilities'
 
-const About = () => {
+const Facility = () => {
   return (
+
     <div>
       <div className="relative h-[400px] overflow-hidden">
         <img
@@ -14,25 +13,24 @@ const About = () => {
         />
         <div className="absolute inset-0 bg-black/50 flex items-center">
           <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-lobster text-white mb-4">About Us</h1>
+            <h1 className="text-5xl font-lobster text-white mb-4">School Facilities</h1>
             <nav className="text-white">
               <ol className="flex space-x-2">
                 <li><Link to="/" className="hover:underline">Home</Link></li>
                 <li>/</li>
-                <li><Link to="/about" className="hover:underline">Pages</Link></li>
+                <li><Link to="/facility" className="hover:underline">Pages</Link></li>
                 <li>/</li>
-                <li className="text-white">About Us</li>
+                <li className="text-white">School Facilities</li>
               </ol>
             </nav>
           </div>
         </div>
       </div>
-      <AboutSection />
-      <CallToActionSection />
-      <Teacher />
+
+      <Facilities />
     </div>
   )
 }
 
-export default About
+export default Facility
 
