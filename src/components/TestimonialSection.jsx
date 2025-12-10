@@ -5,6 +5,7 @@ import 'aos/dist/aos.css'
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
   const testimonials = [
     {
@@ -31,6 +32,17 @@ const Testimonials = () => {
     AOS.init({ duration: 700, once: true })
   }, [])
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)
   }
@@ -41,12 +53,14 @@ const Testimonials = () => {
 
   const getVisibleTestimonials = () => {
     const visible = []
-    for (let i = 0; i < 2; i++) {
+    const count = isMobile ? 1 : 2 // 1 on small devices, 2 on md+
+    for (let i = 0; i < count; i++) {
       const index = (currentIndex + i) % testimonials.length
       visible.push(testimonials[index])
     }
     return visible
   }
+
 
   return (
     <section className="py-10 bg-white">
@@ -68,15 +82,25 @@ const Testimonials = () => {
           {/* Left Arrow */}
           <button
             onClick={prevTestimonial}
-            className=" m-12 absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16
             z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full w-12 h-12
+            items-center justify-center transition-all shadow-lg"
+          >
+            <FaChevronLeft />
+          </button>
+
+          {/* Mobile Left Arrow */}
+          <button
+            onClick={prevTestimonial}
+            className="md:hidden absolute left-4 top-1/2 -translate-y-1/2
+            z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full w-10 h-10
             flex items-center justify-center transition-all shadow-lg"
           >
             <FaChevronLeft />
           </button>
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:mx-12 mx-4">
             {getVisibleTestimonials().map((t, index) => (
               <div
                 key={index}
@@ -115,8 +139,18 @@ const Testimonials = () => {
           {/* Right Arrow */}
           <button
             onClick={nextTestimonial}
-            className=" m-12 absolute right-0 top-1/2 -translate-y-1/2 translate-x-16
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16
             z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full w-12 h-12
+            items-center justify-center transition-all shadow-lg"
+          >
+            <FaChevronRight />
+          </button>
+
+          {/* Mobile Right Arrow */}
+          <button
+            onClick={nextTestimonial}
+            className="md:hidden absolute right-4 top-1/2 -translate-y-1/2
+            z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full w-10 h-10
             flex items-center justify-center transition-all shadow-lg"
           >
             <FaChevronRight />

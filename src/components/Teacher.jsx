@@ -41,7 +41,7 @@ const Teachers = () => {
           <div key={i} className="relative flex flex-col items-center" data-aos="fade-up">
 
             {/* OVAL IMAGE */}
-            <div className="w-[260px] h-[400px] bg-pink-50 rounded-full overflow-hidden">
+            <div className="w-[260px] h-[400px] bg-pink-50 rounded-full overflow-hidden -ml-15 md:ml-5">
               <img
                 src={t.img}
                 className="w-full h-full object-cover"
@@ -55,7 +55,8 @@ const Teachers = () => {
               className="
                 absolute bottom-[-60px] w-[230px] h-[230px]
                 bg-white rounded-full shadow-xl border-12 border-[#FFF5F5]
-                flex flex-col items-center justify-center left-1/2 translate-x-[5%]
+                flex flex-col items-center justify-center 
+                left-1/2 -translate-x-[10%] md:translate-x-[5%]
                 transition-all duration-300 hover:border-orange-500"
             >
               <h3 className="font-inter font-bold text-xl">{t.name}</h3>
