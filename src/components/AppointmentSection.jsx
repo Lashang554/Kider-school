@@ -23,7 +23,7 @@ const AppointmentSection = () => {
     }
 
     return (
-        <section className="mx-2 sm:mx-4 md:mx-8 py-5">
+        <section className="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 py-10">
 
             <div className="container mx-auto px-4 sm:px-6 md:px-12">
 

@@ -27,7 +27,7 @@ const Teachers = () => {
   }, []);
 
   return (
-<section className="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 py-5">
+    <section className="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 py-10">
       <div className="text-center mb-10" data-aos="fade-up">
         <h1 className="text-4xl font-lobster mb-4">Popular Teachers</h1>
         <p className="max-w-2xl mx-auto mt-4 text-gray-500">

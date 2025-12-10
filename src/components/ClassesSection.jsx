@@ -54,7 +54,7 @@ const ClassesSection = () => {
     ];
 
     return (
-        <section className="py-5 ">
+        <section className="py-10">
 
             {/* Added responsive horizontal padding here */}
             <div className="container mx-auto  px-10 sm:px-6 lg:px-8">

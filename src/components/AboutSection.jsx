@@ -12,8 +12,7 @@ const AboutSection = () => {
     })
   })
   return (
-    <section className="py-5 bg-white px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
-
+    <section className="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-up">

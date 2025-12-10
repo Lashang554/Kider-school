@@ -44,7 +44,7 @@ const Facilities = () => {
   ];
 
   return (
-    <section className="py-10 m-15">
+    <section className="py-10 m-7 mt-20">
       {/* Title */}
       <div className="text-center mb-12" data-aos="fade-up">
         <h1 className="text-5xl font-inter font-extrabold text-gray-800 mb-4">
