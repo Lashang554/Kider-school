@@ -4,31 +4,48 @@ import TestimonialSection from '../components/TestimonialSection'
 const Testimonial = () => {
   return (
     <div>
-    < div className="relative h-[400px] overflow-hidden">
+      <div className="relative h-[400px] overflow-hidden">
         <img
           src="/image/carousel-1.jpg"
-          alt="About Us"
+          alt="Testimonial"
           className="w-full h-full object-cover"
         />
-      <div className="absolute inset-0 bg-black/50 flex items-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-lobster text-white mb-4">Testimonial</h1>
-          <nav className="text-white">
-            <ol className="flex space-x-2">
-              <li><Link to="/" className="hover:underline">Home</Link></li>
-              <li>/</li>
-              <li><Link to="/testimonial" className="hover:underline">Pages</Link></li>
-              <li>/</li>
-              <li className="text-white">Testimonial</li>
-            </ol>
-          </nav>
+
+        <div className="absolute inset-0 bg-black/50 flex items-center">
+          <div className="container mx-auto px-4">
+            <h1 className="text-5xl md:text-6xl font-lobster text-white mb-4">
+              Testimonial
+            </h1>
+
+            <nav className="text-white">
+              <ol className="flex space-x-2 text-lg font-medium">
+                <li>
+                  <Link to="/" className="hover:text-orange-400">Home</Link>
+                </li>
+                <li>/</li>
+                <li>
+                  <Link to="/testimonial" className="hover:text-orange-400">Pages</Link>
+                </li>
+                <li>/</li>
+                <li className="text-orange-400">Testimonial</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div className="absolute bottom-[-1px] w-full overflow-hidden">
+          <svg viewBox="0 0 500 60" preserveAspectRatio="none" className="w-full h-[60px]">
+            <path
+              d="M0,30 C150,80 350,-20 500,30 L500,60 L0,60 Z"
+              fill="white"
+            ></path>
+          </svg>
         </div>
       </div>
-      </div>
+
       <TestimonialSection />
     </div>
   )
 }
 
 export default Testimonial
-

@@ -23,8 +23,10 @@ const AppointmentSection = () => {
     }
 
     return (
-        <section className=" m-20 py-5">
-            <div className=" container mx-auto px-4">
+        <section className="mx-2 sm:mx-4 md:mx-8 py-5">
+
+            <div className="container mx-auto px-4 sm:px-6 md:px-12">
+
                 <div className="bg-[#FFF5F5] rounded-lg overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         <div className="flex flex-col justify-center p-8 lg:p-12">
